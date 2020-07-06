@@ -7,6 +7,7 @@ for i in range(len(l)-1, -1, -1):
     reversel.append(l[i]) 
     
 print(reversel)
+
 if l == reversel:
     print("I'm a palindrone")
 else:
