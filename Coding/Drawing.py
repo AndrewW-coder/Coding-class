@@ -1,6 +1,10 @@
 import turtle
 t = turtle.Pen()
-
-for x in range(0, 30):
-    t.forward(50)
-    t.left(175)
+s = 0
+def mysquare(size):
+    for x in range(1,5):
+        t.forward(size)
+        t.left(90)
+for i in range(1, 50):
+    s = s + 2
+    mysquare(s)
