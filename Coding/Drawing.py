@@ -6,5 +6,5 @@ def mysquare(size):
         t.forward(size)
         t.left(90)
 for i in range(1, 50):
-    s = s + 2
     mysquare(s)
+    s = s + 2
