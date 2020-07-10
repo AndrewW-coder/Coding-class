@@ -1,4 +1,3 @@
-from tkinter import *
-tk = Tk()
-canvas = Canvas(tk, width=500, height=500)
-canvas.pack()
+def person(width, height):
+    print('I am %s feet wode, %s feet tall' %(width, height))
+person(7, 8)
