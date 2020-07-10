@@ -7,4 +7,4 @@ def mysquare(size):
         t.left(90)
 for i in range(1, 50):
     mysquare(s)
-    s = s + 2
+    s = s + 1
