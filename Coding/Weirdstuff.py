@@ -1,3 +1,5 @@
-def person(width, height):
-    print('I am %s feet wode, %s feet tall' %(width, height))
-person(7, 8)
+l = [1, 2, 3, 4, 5]
+p = 1
+for x in range(0, len(l)):
+    p = p * l[x]
+print(p)
