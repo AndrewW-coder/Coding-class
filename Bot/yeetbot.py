@@ -16,14 +16,14 @@ async def song(ctx):
 async def hi(ctx):
     await ctx.send("hello")
 
-@client.command()
-async def coinflip(ctx):
-    await ctx.send(
-x = randint(1, 2)
-if x == 1:
-    print('Heads')
-else print('Tails')
-    )
+#@client.command()
+#async def coinflip(ctx):
+    #await ctx.send(
+#x = randint(1, 2)
+#if x == 1:
+    #print('Heads')
+#else print('Tails')
+#    )
 
 
 
