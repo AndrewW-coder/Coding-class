@@ -22,15 +22,15 @@ sl = sorted(l)
 r = sl[len(l)-1] - sl[0]
 print('The range of the list is %s' %r)
 #median
-if len(sl) % 2 == 0:
-    b = 0
-    e = int(len(sl)-1)
-    while len(sl) > 1:
-        sl.remove(sl[e])
-        sl.remove(sl[b])       
-        b += 1
-        e -= 1
-    m = (sl[0] + sl[1])/2
+# if len(sl) % 2 == 0:
+#     b = 0
+#     e = int(len(sl)-1)
+#     while len(sl) > 1:
+#         sl.remove(sl[e])
+#         sl.remove(sl[b])       
+#         b += 1
+#         e -= 1
+#     m = (sl[0] + sl[1])/2
 # if len(sl) % 2 == 1:
 #     b = 0
 #     e = int(len(sl))
