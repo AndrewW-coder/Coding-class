@@ -1,4 +1,4 @@
-l = [1, 7, 5, 9, 3]
+l = [1, 7, 5, 9, 3, 5]
 m = l[0]
 #Max
 for i in range(1, len(l)):
@@ -21,3 +21,26 @@ print('The average of the list is %s' %a)
 sl = sorted(l)
 r = sl[len(l)-1] - sl[0]
 print('The range of the list is %s' %r)
+#median
+if len(sl) % 2 == 0:
+    b = 0
+    e = int(len(sl)-1)
+    while len(sl) > 1:
+        sl.remove(sl[e])
+        sl.remove(sl[b])       
+        b += 1
+        e -= 1
+    m = (sl[0] + sl[1])/2
+# if len(sl) % 2 == 1:
+#     b = 0
+#     e = int(len(sl))
+#     while len(sl) > 0:
+#         sl.remove(sl[b])
+#         sl.remove(sl[e])
+#         b += 1
+#         e -= 1
+#     m = sl[0]
+
+# print('The median is %s' %m)
+
+
