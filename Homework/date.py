@@ -10,5 +10,5 @@ def cal_days(month, day, year):
     days += day
     print(days)
     return days
-cal_days(2, 1, 2020)
+cal_days(12, 31, 2021)
 
