@@ -1,9 +1,14 @@
-# def cal_days(month, day, year):
-#     jan =  mar = may = jul = aug = octo = dec = 31
-#     apr = jun = sep = nov = 30
-#     if year % 4 == 0:
-#         feb = 29
-#     else:
-#         feb = 28
+def leapyear(year):
+    return year % 4 == 0 and year % 100 != 0 or year % 400 == 0
 def cal_days(month, day, year):
-    if month     
+    days_in_month = [[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+    [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    ][leapyear(year)] 
+    days = 0
+    for i in range(month - 1):
+        days += days_in_month[i]
+    days += day
+    print(days)
+    return days
+cal_days(2, 1, 2020)
+
