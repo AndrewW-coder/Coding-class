@@ -6,8 +6,10 @@ def prime_num(num):
         if x % i == 0:
             l.append(i)
     if len(l) == 0:
-        f = ('Im a prime number!')
+        f = ("I'm a prime number!")
     else:
+        l.insert(0, 1)
+        l.insert(x, x)
         f = ("I'm not a prime number." + " My factors are " + str(l))
     return f
 print(prime_num(x))
