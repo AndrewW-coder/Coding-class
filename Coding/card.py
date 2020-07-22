@@ -10,5 +10,6 @@ for i in range(0, 4):
     else:
         print('|' + str(l[n]) + s[suit] + ' |')
     print('|' + '    |')
-    print(' `````')
+    print(' `````') 
+    
     
