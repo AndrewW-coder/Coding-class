@@ -7,7 +7,7 @@ Ace = 1
 King = 10
 Queen = 10
 Jack = 10
-l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King, Ace]
+l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 10]
 
 card1 = random.randint(1, 10)
 card2 = random.randint(1, 10)
