@@ -24,7 +24,7 @@ print('The dealer got 2 cards and one of them was a ' + str(card2))
 
 
 for i in range(0, 5):
-    your_decision = input('Do you wish to hit or stand?(please type in lowercase) ')
+    your_decision = input('Do you wish to hit or stand? ').lower()
     if your_decision == 'hit':
         n = random.randint(0, len(l)-1)
         your_value += l[n]
