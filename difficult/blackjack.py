@@ -28,7 +28,7 @@ for i in range(0, 5):
     if your_decision == 'hit':
         n = random.randint(0, len(l)-1)
         your_value += l[n]
-        while dealer_value <= 14:
+        while dealer_value <= 15:
             d = random.randint(0, len(l)-1)
             dealer_value += l[d]
     
@@ -36,7 +36,7 @@ for i in range(0, 5):
         print('The card you have recieved is ' + str(l[n]))
         print('This now brings you up to a total of ' + str(your_value))
     else:
-        while dealer_value <= 14:
+        while dealer_value <= 15:
             d = random.randint(0, len(l)-1)
             dealer_value += l[d]
         your_value = your_value
