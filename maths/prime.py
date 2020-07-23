@@ -10,6 +10,6 @@ def prime_num(num):
     else:
         l.insert(0, 1)
         l.insert(x, x)
-        f = ("I'm not a prime number." + " My factors are " + str(l))
+        f = ("I'm not a prime number, I'm a composite number." + " My factors are " + str(l))
     return f
 print(prime_num(x))
