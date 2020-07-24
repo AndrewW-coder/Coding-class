@@ -42,15 +42,16 @@ for i in range(0, 5):
         your_value = your_value
         print('Your final total is ' + str(your_value))
         print('The dealers value is ' + str(dealer_value))
-        if your_value > dealer_value:
-            print('Congratulations! You beat the dealer! Thanks for playing!')
-            break
-        elif your_value < dealer_value:
-            print('Sorry, looks like the dealer beat you. Try again next time!')
-            break
-        else:
-            print('Looks like you have a draw! How suprising!')
-            break
+        if your_value <= 21 and dealer_value <= 21:
+            if your_value > dealer_value:
+                print('Congratulations! You beat the dealer! Thanks for playing!')
+                break
+            elif your_value < dealer_value:
+                print('Sorry, looks like the dealer beat you. Try again next time!')
+                break
+            else:
+                print('Looks like you have a draw! How suprising!')
+                break
     if your_value > 21 and dealer_value <= 21:
         print('The dealer had ' + str(dealer_value))
         print("Sorry, looks like you busted and the dealer didn't. You lost. Try again next time!")
