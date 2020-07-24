@@ -179,4 +179,4 @@ async def coinflip(ctx):
 @client.command()
 async def commands(ctx):
     await ctx.send("yeet.hi, yeet.song, yeet.games, yeet.rickroll, yeet.maths, yeet.shots, yeet.guns, yeet.eightball, yeet.life")
-client.run('NzMxOTY0MDM0ODY1Mjk5NTM3.Xwx6Vw.waQZYsmLL8WNHOR4xnF13n_LTLM')
+client.run('NzMxOTY0MDM0ODY1Mjk5NTM3.Xxov8A.ygOLcni8pfcYiltnjZ5guqTecM8')
