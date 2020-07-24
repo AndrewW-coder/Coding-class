@@ -1,10 +1,10 @@
 import random
 
-moves = ['Rock', 'Paper', 'Scissors']
+moves = ['Rock', 'Paper', 'Scissors', 'Gun']
 
 x = input('What do you choose? Rock, Paper, or Scissors: ').lower()
 
-r = random.randint(0, len(moves)-1)
+r = random.randint(0, len(moves)-2)
 
 a = moves[r].lower()
 print('You have chosen to play ' + x)
@@ -25,3 +25,5 @@ if a == 'paper' and x == 'scissors':
     print('You won!')
 if x == 'paper' and a == 'scissors':
     print('You lost.')
+if x == 'gun':
+    print('You have found the secret weapon. Your opponent is amazed to death. YOU WIN!')
