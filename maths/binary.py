@@ -4,7 +4,7 @@ if x == 'b':
     b = ''
     while num > 0:
         b = str(num % 2) + b
-        num = num/2
+        
     print(b)
     
 
