@@ -10,9 +10,9 @@ def target_sum(li, target):
                     s.append(i)
                     s.append(j)
                     lis.append(s)
-    # for i in range(0, len(lis) - 1):
-    #     if lis[i][0] > lis[i][1]:
-    #         lis.remove(lis[i])
+    for i in range(0, len(lis) - 1):
+        if lis[i][0] > lis[i][1]:
+            lis.remove(lis[i])
 
 
     return lis
