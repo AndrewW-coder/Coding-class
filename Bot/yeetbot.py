@@ -130,45 +130,15 @@ async def embed2(ctx):
 
 
 
-#shots
-# @client.command()
-# async def headshot(ctx, a:str):
-#     await ctx.send(a + ' has been headshot and has been eliminated.')
-
-# @client.command()
-# async def swagshot(ctx, a:str):
-#     await ctx.send(a + ' has been 360 no-scoped. They should be embarrased')
-
-# @client.command()
-# async def dankshot(ctx, a:str):
-#     await ctx.send(a + ' has been dankified so hard, they died')
-
-# @client.command()
-# async def shots(ctx):
-#     await ctx.send('yeet.swagshot, yeet.headshot, yeet.dankshot')
-
-#guns
-# @client.command()
-# async def use_shotgun(ctx):
-#     await ctx.send('You are using a shotgun')
-
-# @client.command()
-# async def use_sniper_rifle(ctx):
-#     await ctx.send('You are using a sniper rifle')
-
-# @client.command()
-# async def use_AR(ctx):
-#     await ctx.send('You are using a AR')
-
-# @client.command()
-# async def guns(ctx):
-#     await ctx.send('yeet.use_sniper_rifle, yeet.use_shotgun, yeet.use_AR')
 
 l = ['It is certain', 'It is decidedly so', 'Yes', 'Outlook good', 'Reply hazy, try again', 'Ask again later', 'Better not tell you now', 'No', "Don't count on it", 'my sources say no', 'Very doubtful']
 n = random.randint(0, len(l) - 1)
 @client.command()
 async def eightball(ctx):
-    await ctx.send(l[n])
+    n = random.randint(0, len(l) - 1)
+    await ctx.send(l[n]) 
+    
+    
 
 c = ['Heads', 'Tails']
 r = random.randint(0, len(l) - 1)
