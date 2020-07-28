@@ -8,11 +8,11 @@ def target_sum(li, target):
                 s.append(i)
                 s.append(j)
                 lis.append(s)
-    # for i in range(0, len(lis) - 1):
-    #     for j in range(0, len(lis) - 1):
-    #         while i != j: 
-    #             if lis[i].sort() == lis[j].sort():
-    #                 lis.remove(lis[j])
+    for i in range(0, len(lis) - 1):
+        for j in range(0, len(lis) - 1):
+            while i != j: 
+                if lis[i].sort() == lis[j].sort():
+                    lis.remove(lis[j])
 
 
 
