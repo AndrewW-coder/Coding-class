@@ -1,4 +1,4 @@
-l = [1, 2, -3, 2, -4]
+l = [1, 2, -3]
 def element(l):
     lis = []
     for i in range(0, len(l)):
