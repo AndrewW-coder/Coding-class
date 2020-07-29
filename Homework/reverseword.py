@@ -1,22 +1,14 @@
-class reverse(object):
-    def __init__(self, s):
-        self.s = s
-    def talk(self):
-        # l = self.s.split()
-        # for i in range(0, len(l)):
-        #     m = len(l[i])
-        #     for m in range(m, -1):
-        #         l.append(l[i][m])
-        l = []
-        for i in range(0, len(self.s)):
-            l.append(self.s[i])
-        l = l.reverse()
-        
-        print(l)
+def reverse_word(s):
+    l = s.split()
+    for i in range(len(l) - 1, -1, -1):
+        l.append(l[i])
+    for i in range(0, int(len(l)/2)):
+        l.remove(l[i])
+    return l
+
+print(reverse_word('hi i like pie'))
 
         
-test = reverse('Hi i like pie')
-test.talk()
 
 
 
