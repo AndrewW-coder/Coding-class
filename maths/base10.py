@@ -6,6 +6,7 @@ def base10(num):
         n = num % 10
         s += n * m ** i
         num //= 10
+    s = 'The number in base 10 is ' + str(s) + '.'
     return s
 x = int(input('Insert number here: '))
 print(base10(x))
