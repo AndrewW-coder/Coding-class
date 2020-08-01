@@ -33,7 +33,3 @@ for j in range(0, 26):
         print('Congratualations, you have guessed the word!')
         break
     print(l)
-    
-
-    
-
