@@ -3,8 +3,14 @@ import math
 from math import sqrt
 from discord.ext import commands
 import random
+import os
+
 #prefix
-client = commands.Bot(command_prefix = ('yeet.', 'yeet '))
+client = commands.Bot(command_prefix = ('yeet.', 'yeet ', 't.'))
+#IDK
+for file in os.listdir('./cogs'):
+    if file.endswith('.py'):
+        client.load_extension(f'cogs.{file[:-3]}')
 #startup
 @client.event
 async def on_ready():
@@ -131,7 +137,17 @@ async def embed2(ctx):
 
 
 
-l = ['It is certain', 'It is decidedly so', 'Yes', 'Outlook good', 'Reply hazy, try again', 'Ask again later', 'Better not tell you now', 'No', "Don't count on it", 'my sources say no', 'Very doubtful']
+l = ['It is certain',
+ 'It is decidedly so', 
+ 'Outlook good', 
+ 'Ask again later, you noob',
+ 'Better not tell you now', 
+ "Don't count on it", 
+ 'my sources say no', 
+ 'Very doubtful',
+ 'What type of question is that?!',
+ 'How do you not know the answer?!',
+ 'Bruh']
 n = random.randint(0, len(l) - 1)
 @client.command()
 async def eightball(ctx):
@@ -147,6 +163,7 @@ async def coinflip(ctx):
     await ctx.send(c[r])
 
 @client.command()
-async def commands(ctx):
-    await ctx.send("yeet.hi, yeet.song, yeet.games, yeet.rickroll, yeet.maths, yeet.shots, yeet.guns, yeet.eightball, yeet.life")
-client.run('NzMxOTY0MDM0ODY1Mjk5NTM3.Xxov8A.ygOLcni8pfcYiltnjZ5guqTecM8')
+async def spam(ctx, a:str, b:int):
+    await ctx.send((a + '\n') * b) 
+
+client.run('NzMxOTY0MDM0ODY1Mjk5NTM3.XwtsoQ.mM_B5YTWg5_SBqXTwyVc2Khwhz8')

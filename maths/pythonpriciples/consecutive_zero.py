@@ -1,15 +1,20 @@
 def consecutive_zeros(num):
-    l = []
-    l1 = []
     word = str(num)
-    for i in range(0, len(word)):
-        if int(word[i]) == 0:
-            l.append(i)
-    for i in range(0, len(l)):
-        if l[i] + 1 == l[i + 1]:
-            l1 = []
-            
-
-    
-    return l
-print(consecutive_zeros(100))
+    if len(word) > 1:
+        l = []
+        t = 0
+        for i in range(0, len(word) - 1):
+            while int(word[i]) == 0:
+                t += 1
+                i += 1
+                if int(word[i]) == 1:
+                    l.append(t)
+                    t = 0
+    else:
+        l = []
+        if int(word[0]) == 0:
+            l.append(1)
+        else:
+            l.append(0)
+    return max(l)
+print(consecutive_zeros(0))
