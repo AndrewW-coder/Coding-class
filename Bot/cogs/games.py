@@ -5,6 +5,8 @@ import os
 import random
 import html
 import asyncio
+import aiohttp
+
 
 
 
@@ -51,7 +53,21 @@ class games(commands.Cog):
         embed2.clear_fields()
         embed2.add_field(name = name, value = answer_string)
         await question.edit(embed = embed2)
-    
+
+
+    @commands.command(aliases = ["j"])
+    async def joke(self, ctx):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://icanhazdadjoke.com') as r:
+                if r.status == 200:
+                    result = await r.text()
+                    result = result.encode("utf-8").decode("utf-8")
+                    embed = discord.Embed(
+                        title = ':rofl:',
+                        description = f"{result}",
+                        colour = ctx.author.color                     
+                    )
+                    await ctx.send(embed=embed)   
     
 
 def setup(client):
