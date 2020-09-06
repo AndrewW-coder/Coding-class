@@ -2,7 +2,7 @@ import time
 from time import sleep
 
 
-letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+letters = []
 print('This is Hangman!')
 sleep(1)
 print('(a 2 player game)')
@@ -23,13 +23,15 @@ for j in range(0, 26):
                 guess = guess
     elif letter not in word:
         print('That letter is not in the word.')
-        s
         sleep(0.5)
         guess -= 1
         print('You have %s guesses left.' %guess)
+        letters.append(letter)
     s = ''.join(l)
     if s.count('_') == 0:
         print(l)
         print('Congratualations, you have guessed the word!')
         break
     print(l)
+    print('The letters you cannot guess are:')
+    print(letters)

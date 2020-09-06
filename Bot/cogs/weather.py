@@ -28,6 +28,7 @@ class Weather(commands.Cog):
         humidity = weather.humidity
         air_pressure = weather.pressure
         wind = weather.wind(unit = 'miles_hour')
+        visibility = weather.visibility_distance
         ############################################################################################
         sunrise = datetime.utcfromtimestamp(weather.sunrise_time(timeformat = 'unix') + weather.utc_offset).strftime('%#I:%M %p')
         sunset = datetime.utcfromtimestamp(weather.sunset_time(timeformat = 'unix') + weather.utc_offset).strftime('%#I:%M %p')
@@ -36,7 +37,7 @@ class Weather(commands.Cog):
 
         embed = discord.Embed(
             title = f"Weather in {string.capwords(place)}",
-            description = weather.detailed_status.capitalize(),
+            description = ":cloud: " + weather.detailed_status.capitalize() + " :cloud:",
             color = ctx.author.color
         )
         embed.add_field(name = 'Temperature', value = f"""
@@ -45,10 +46,11 @@ class Weather(commands.Cog):
             :small_red_triangle: {round(temperature['temp_max'], 1)} °F
             :small_red_triangle_down: {round(temperature['temp_min'], 1)} °F""")
         embed.add_field(name = 'Extra Info', value = f"""
-            :droplet: Humidity: {humidity}
+            :droplet: Humidity: {humidity}%
             :cloud_tornado: Air pressure: {air_pressure['press']}
             :wind_blowing_face: Wind speed: {round(wind['speed'], 0)}mph
-            :compass: Bearing: {round(wind['deg'], 0)}°""")
+            :compass: Bearing: {round(wind['deg'], 0)}°
+            :telescope: Visibility distance: {visibility} meters""")
         embed.add_field(name = 'Sunrise and Sunset', value = f"""
             :sunrise: Sunrise: {sunrise}
             :city_sunset: Sunset: {sunset}""") 
